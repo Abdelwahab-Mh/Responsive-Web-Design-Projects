@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+body {
+    background-image: url(../images/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+.container {
+    padding: 15px;
+    max-width: 1400px;
+    margin-bottom: 35px;
+    margin: 0 auto;
+}
+@keyframes move {
+    from {
+        width: 50%;
+    }
+    to {
+        width: 100%;
+    }
+}
+/*---------------- HEADER CSS --------------------- */
+.header {
+    width: 100%;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: move 2s ;
+}
+.header .container .menu ul {
+    padding: 0;
+    margin: 0;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header .container .menu ul li {
+    list-style: none;
+    padding: 15px;
+    cursor: pointer;
+}
+.header .container .logo {
+    align-self: center;
+    height: 100%;
+    width: 100%;
+}
+.header .container .logo img {
+    width: 200px;
+}
+/*---------------- CONTANT CSS --------------------- */
+/*---------------- Left ----------------- */
+.contant .container .left {
+    margin-bottom: 35px;
+    width: 30%;
+}
+.contant .container .left h2 {
+    width: 100%;
+    font-weight: 400;
+    color: rgb(0, 150, 250);
+    font-size: 45px;
+}
+.contant .container .left p {
+    line-height: 25px;
+    font-size: 14px;
+    width: 100%;
+    color: #f6f6f6;
+    margin-bottom: 30px;
+}
+.contant .container .left button {
+    cursor: pointer;
+    padding: 10px;
+    color: rgb(0, 150, 250);
+    background-color: transparent;
+    border: 2px solid rgb(0, 150, 250);
+}
+/*---------------- Line ----------------- */
+.contant {
+    width: 99%;
+}
+.contant .line {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(0, 150, 250);
+    height: fit-content;
+}
+.contant .line .container {
+    height: 100%;
+    padding-top: 20px;
+    animation: move 2s ;
+}
+.contant .line .container ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.contant .line .container ul li {
+    margin: 0 auto;
+    width: 150px;
+    list-style: none;
+    margin-bottom: 15px;
+}
+.contant .line .container ul li div {
+    margin-left: 20px;
+    text-align: center;
+}
+.contant .line .container ul li div h5 {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    color: #ffff;
+}
+.contant .line .container ul li div img {
+    margin-bottom: 10px;
+    width: 60px;
+    height: 40px;
+}
+/*---------------- Numper ----------------- */
+.contant .bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    margin: 0 auto;
+    text-align: center;
+
+    animation: move 2s ;
+}
+.contant .bottom .num {
+    margin: 12px;
+    position: relative;
+}
+.contant .bottom .num::before {
+    content: "1";
+    font-size: 90px;
+    height: 100%;
+    color: goldenrod;
+    position: absolute;
+    left: -55px;
+}
+.contant .bottom .num h5 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: #ffff;
+}
+.contant .bottom .num h5::before {
+    content: "#";
+    font-size: 40px;
+    height: 100%;
+    color: goldenrod;
+    position: absolute;
+    top: 12px;
+    left: -85px;
+}
+.contant .bottom .num h6 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 7px;
+    color: rgb(0, 150, 250);
+    cursor: pointer;
+}
+/*---------------- Footer CSS --------------------- */
+.footer {
+    width: 100%;
+    background-color: black;
+    margin-bottom: 10px;
+}
+.footer .container {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffff;
+}
+.footer .container h5 {
+    margin-right: 170px;
+}
+.footer .container p {
+    color: #777;
+    text-align: center;
+}
+.footer .container ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.footer .container ul li {
+    padding: 0 10px;
+    margin: 0;
+    color: #777;
+    list-style: none;
+    font-size: 15px;
+}
+/*---------------- Responsev CSS --------------------- */
+@media (max-width:840px) {
+    /*---------------- Header --------------------- */
+    .header .container .logo img {
+        width: 125px;
+    }
+    .header .container .menu ul li img {
+        width: 22px;
+    }
+    /*---------------- Contant --------------------- */
+    .contant .container .left {
+        width: 100%;
+        text-align: center;
+    }
+    .contant .container .left h2 {
+        font-size: 35px;
+    }
+    .contant .container .left p {
+        font-size: 12px;
+    }
+    .contant .line .container ul {
+        flex-wrap: wrap;
+    }
+    .contant .bottom {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .contant .bottom {
+        justify-content: flex-end;
+        text-align: center;
+    }
+    /*---------------- footer --------------------- */
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer .container h5 {
+        margin-right: 0;
+    }
+}
+@media (max-width:544px) {
+    .footer .container ul {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:325px) {
+    .header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header .container .logo {
+        text-align: center;
+    }
+    .header .container {
+        animation: 0s ;
+    }
+}

@@ -1,0 +1,342 @@
+/*----------------- Glopal Rules --------------------*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+:root {
+    --main-color:#10cab7;
+}
+
+/*-------------- body -------------------------------*/
+body {
+    font-family: "Work Sans", sans-serif;
+    background-image: url(../IMGS/cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.container {
+    margin: 0 auto;
+    padding:0 10px ;
+}
+/*---- Small -----*/
+@media (min-width:768px){
+    .container {
+        width: 750px;
+    }
+}
+/*------ Medium -------*/
+@media (min-width:992px){
+    .container {
+        width: 970px;
+    }
+}
+/*------ Small ---------*/
+@media (min-width:1200px){
+    .container {
+        width: 1170px;
+    }
+}
+/* -------------- headder ------------------ */
+.header .container{
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .container ul{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 0;
+    padding-left: 0;
+}
+.header .container ul li{
+    list-style: none;
+    margin: 25px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+.header .container ul li::before{
+    content: " ";
+    position: absolute;
+    left: 2px;
+    top: 30px;
+    width: 96%;
+    height: 4px;
+    background-color: white;
+    display: none;
+}
+.header .container ul li:hover::before  {
+    display: block;
+}
+.header .container .ser {
+    background-color: transparent;
+    margin: 25px 20px;
+    border-radius: 10px;
+    outline: white;
+    border: white solid 2px;
+    padding: 13px 10px;
+    display: flex;
+    align-items: center;
+}
+.header .container .ser input{
+    background-color: transparent;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.header .container .ser i{
+    height: 100%;
+    font-size: 22px;
+    color: white;
+}
+.header .container .ser input::placeholder{
+    color: white;
+}
+@media (max-width:668px){
+    .header .container {
+        flex-direction: column;
+    }
+    .header .container ul li{
+        list-style: none;
+        margin: 17px 15px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        position: relative;
+    }
+    .header .container .ser {
+        background-color: transparent;
+        margin: 0 10px;
+        margin-top: 15px;
+        border-radius: 10px;
+        outline: white;
+        border: white solid 2px;
+        padding: 13px 10px;
+        display: flex;
+        align-items: center;
+    }
+    .header .container .ser input{
+        background-color: transparent;
+        font-size: 19px;
+        font-weight: bold;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+}
+/* -------------- contant ------------ */
+
+.contant .container {
+    max-width: 1000px;
+}
+.contant .all {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    margin: 40px auto;
+    background-image: url(../IMGS/cover.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+}
+.contant .txt {
+    width: 60%;
+    height: fit-content;
+    padding: 70px 50px;
+}
+.contant .txt .login{
+    display: flex;
+    margin-bottom: 150px;
+    color: white;
+}
+.contant .txt .login h2{
+    display: flex;
+    margin-bottom: 7px;
+    padding-left: 3px;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+.contant .txt .login i {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-right: 3px;
+    color: white;
+}
+.contant .txt h3{
+    display: flex;
+    margin-bottom: 7px;
+    padding-left: 3px;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+.contant .txt h4{
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1.6;
+    color: white;
+}
+.contant .txt p{
+    margin-bottom: 24px;
+    font-weight: bold;
+    letter-spacing: 1.6;
+    color: #777;
+}
+.contant .txt .ico i {
+    padding-right: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.contant .sign-in{
+    width: 40%;
+ 
+}
+.contant .sign-in .frm {
+    backdrop-filter: blur(15px);
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+}
+.contant .sign-in .frm h2 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.contant .frm .in-box {
+    max-width: 330px;
+    height: 50px;
+    border-bottom: 2px solid white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contant .sign-in .frm .in-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: white;
+}
+.contant .frm .in-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: .8s ease;
+    pointer-events: none;
+}
+.contant .frm .in-box i{
+    position: absolute;
+    right: 0;
+}
+.contant .frm .in-box input:focus~label,.contant .frm .in-box input:valid~label{
+    top: -5px;
+}
+.contant .frm .rem-for {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.contant .frm .rem-for label{
+    font-size: 14px;
+    letter-spacing: -1;
+    font-weight: 600;
+}
+.contant .frm .rem-for a{
+    font-size: 12px;
+    letter-spacing: -1;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+.contant .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    background-color: rgb(194, 8, 48);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+}
+.contant .btn:hover{
+    background-color: rgb(194 8 48/75%);
+}
+.contant .sign-up {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+.contant .sign-up a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width:767px){
+    .contant .container .all{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contant .txt {
+        width: 100%;
+        text-align: center;
+    }
+    .contant .txt .login {
+        justify-content: center;
+        margin-bottom: 20px;
+        font-size: 53px;
+    }
+    .contant .txt .login h2 {
+        font-size: 43px;
+    }
+    .contant .txt .login i {
+        font-size: 40px;
+    }
+    .contant .txt h3 {
+        justify-content: center;
+    }
+
+    .contant .sign-in{
+        width: 100%;
+    }
+    .contant .sign-up {
+        padding-bottom: 20px;
+    }
+}
+
+
+
